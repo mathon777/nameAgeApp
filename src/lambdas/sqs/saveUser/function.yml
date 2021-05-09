@@ -1,0 +1,8 @@
+save-user:
+  handler: src/lambdas/sqs/saveUser/handler.handle
+  events:
+    - sqs:
+        arn:
+          Fn::GetAtt:
+            - SQSUserEventQueue
+            - Arn

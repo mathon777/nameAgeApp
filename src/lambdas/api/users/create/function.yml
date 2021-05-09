@@ -1,0 +1,7 @@
+user-create:
+  handler: src/lambdas/api/users/create/handler.handle
+  events:
+    - http:
+        path: /users
+        method: POST
+        cors: true
